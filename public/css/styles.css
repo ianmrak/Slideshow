@@ -1,0 +1,129 @@
+html {
+  height: 100%;
+}
+body {
+  background-color: #F1F1F1;
+  height: 100%;
+  margin: 0;
+  font-family: 'Arial', Sans-serif;
+}
+h2 {
+  font-size: 50px;
+  text-align: center;
+  background-color: #18212D;
+  color: white;
+  margin: 0 0 1em 0;
+  padding: 25px;
+  border-bottom: 1px solid silver;
+}
+.wrapper img {
+  border-radius: 7px;
+  float: right;
+  max-width: 600px;
+  border: 1px solid #18212D;
+}
+.nav > li > a {
+  padding: 0 10px;
+  margin: 0;
+}
+.nav-text {
+  float: right !important;
+  margin: 0 10px;
+  text-align: right;
+  color: #808080;
+}
+#centerImg {
+  float: none;
+}
+.wrapper ul {
+  display: flex;
+  flex-direction: column;
+  float: left;
+  list-style-type: circle;
+  margin: 0px;
+  padding: 0px;
+}
+.wrapper li {
+  min-height: 80px;
+  font-size: 20px;
+  text-align: left;
+  min-width: 500px;
+}
+.nav {
+  background-color: white;
+  margin-bottom: 16px;
+  padding: 6px 20px 6px 20px;
+  border-bottom: 1px solid silver;
+}
+
+.wrapper {
+  min-width: 1200px;
+  overflow: hidden;
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+}
+.footer {
+  z-index: 10000;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  font-size: 13px;
+  background-color: white;
+  padding: 6px 20px 6px 6px;
+  border-top: 1px solid silver;
+  color: #808080;
+  text-align: right;
+}
+.viewContainer {
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  padding-bottom: 20px;
+  background-color: white;
+  width: 95%;
+  border: 1px solid silver;
+  overflow: hidden;
+  position: absolute;
+  min-height: 700px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+/* Animations ====================== */
+
+@keyframes slideOutLeft {
+  to      { transform: translateX(100%); }
+}
+@keyframes slideInLeft {
+  from    { transform:translateX(-100%); }
+  to      { transform: translateX(0); }
+}
+@keyframes slideOutRight {
+  to      { transform: translateX(-100%); }
+}
+@keyframes slideInRight {
+  from    { transform:translateX(100%); }
+  to      { transform: translateX(0); }
+}
+
+[ui-view].ng-enter, [ui-view].ng-leave {
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+.left [ui-view].ng-enter {
+  animation: slideInLeft 0.5s both ease-in;
+  z-index: 8888;
+}
+.left [ui-view].ng-leave {
+  animation: slideOutLeft 0.5s both ease-in;
+  z-index: 9999;
+}
+.right [ui-view].ng-enter {
+  animation: slideInRight 0.5s both ease-in;
+  z-index: 8888;
+}
+.right [ui-view].ng-leave {
+  animation: slideOutRight 0.5s both ease-in;
+  z-index: 9999;
+}

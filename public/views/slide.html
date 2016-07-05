@@ -1,0 +1,9 @@
+<div slide>
+  <h2>{{ slide.title }}</h2>
+  <div class="wrapper">
+    <ul class="list-group">
+      <li class="list-group-item" ng-repeat="point in slide.points">{{ point }}</li>
+    </ul>
+    <img id="{{ slide.imgId }}" ng-src="{{ slide.image }}" ng-if='slide.image'>
+  </div>
+</div>
