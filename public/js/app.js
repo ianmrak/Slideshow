@@ -16,5 +16,5 @@ angular.module('Slideshow',
     url: '/slides/:id',
     templateUrl: 'views/slide.html',
     controller: 'SlideController'
-  })
+  });
 });

@@ -4,5 +4,5 @@ angular.module('Slideshow.footer', [])
   return {
     retrict: 'E',
     templateUrl: 'views/footer.html'
-  }
+  };
 });

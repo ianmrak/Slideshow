@@ -16,9 +16,9 @@ angular.module('Slideshow.slides', [])
     var oldDirection = newDirection === 'left' ? 'right' : 'left';
     document.body.classList.remove(oldDirection);
     document.body.classList.add(newDirection);
-  }
+  };
   return {
     getSlides: getSlides,
-    transition: slideTransition,
+    transition: slideTransition
   };
 });

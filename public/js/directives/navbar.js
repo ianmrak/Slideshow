@@ -4,5 +4,5 @@ angular.module('Slideshow.navbar', [])
   return {
     retrict: 'E',
     templateUrl: 'views/navbar.html'
-  }
+  };
 });

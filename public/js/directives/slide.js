@@ -34,7 +34,7 @@ angular.module('Slideshow.transition', [])
             $scope.slide.image = $scope.slide.img[$scope.index];
           });
         }
-      }
+      };
     }
-  }
+  };
 });
